@@ -1,0 +1,20 @@
+*.class
+
+# Mibile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.War
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hostpot.xml
+hs_err_pir*
+
+.idea
+*.iml
+
+target
+
+out
+*.log
