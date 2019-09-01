@@ -35,4 +35,10 @@ public class SqMaxTest {
         int result = check.max(4, 2, 8, 1);
         assertThat(result, is(8));
     }
+    @Test
+    public void whenForthMax8() {
+        SqMax check = new SqMax();
+        int result = check.max(4, 2, 3, 8);
+        assertThat(result, is(8));
+    }
 }

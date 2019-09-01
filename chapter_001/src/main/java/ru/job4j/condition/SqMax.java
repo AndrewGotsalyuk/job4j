@@ -5,10 +5,12 @@ public class SqMax {
         int result = forth;
         if (first > second && first > third) {
                 if (first > forth) {
-                } result = first;
+                    result = first;
+                }
         } else if (second > third) {
             if (second > forth) {
-            } result = second;
+                result = second;
+            }
         } else if (third > forth){
             result = third;
         }
