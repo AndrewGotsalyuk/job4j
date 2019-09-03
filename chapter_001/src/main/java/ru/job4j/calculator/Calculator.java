@@ -1,5 +1,19 @@
+/**
+ * Calculator
+ *
+ * @author Andrey Gotsalyuk
+ * @version $Id$
+ * @since 03/09/2019
+ */
 package ru.job4j.calculator;
 
+/**
+ * Класс вычисления арифметических операций + - * /
+ *
+ * @author Andrey Gotsalyuk
+ * @version $Id$
+ * @since 03/09/2019
+ */
 public class Calculator {
 
     public static void add(double first, double second) {
@@ -22,6 +36,10 @@ public class Calculator {
         System.out.println(first + "-" + second + " = " + result);
     }
 
+/**
+* Конструктор, вывод строки в консоль
+* @param args = args
+*/
     public static void main(String[] args) {
         add(1, 1);
         div(4, 2);
