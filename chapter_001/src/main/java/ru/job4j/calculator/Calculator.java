@@ -16,21 +16,43 @@ package ru.job4j.calculator;
  */
 public class Calculator {
 
+/**
+ * Метод сложения
+ * @param first первый аргумент
+ * @param second второй аргумент
+ * @return результат
+ */
+
     public static void add(double first, double second) {
         double result =  first + second;
         System.out.println(first + "+" + second + " = " + result);
     }
-
+/**
+ * Метод деления
+ * @param first первый аргумент
+ * @param second второй аргумент
+ * @return результат
+ */
     public static void div(double first, double second) {
         double result =  first / second;
         System.out.println(first + "/" + second + " = " + result);
     }
-
+/**
+ * Метод умножения
+ * @param first первый аргумент
+ * @param second второй аргумент
+ * @return результат
+ */
     public static void multiply(double first, double second) {
         double result =  first * second;
         System.out.println(first + "*" + second + " = " + result);
     }
-
+/**
+ * Метод вычитания
+ * @param first первый аргумент
+ * @param second второй аргумент
+ * @return результат
+ */
     public static void subtrack(double first, double second) {
         double result =  first - second;
         System.out.println(first + "-" + second + " = " + result);
