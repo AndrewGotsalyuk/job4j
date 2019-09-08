@@ -7,18 +7,39 @@ public class MatrixCheck {
             for (int cell = 0; cell < board.length; cell++) {
                 char sign = board[row][cell];
                 System.out.print(sign);
+                for (int i = 0; i < board.length - 1; i++) {
+                    if ((board[0][0] == board[i + 1][i + 1]) || (board[board.length - 1][0] == board[board.length - 1 - i][i])) {
+                        result = true;
+                        break;
+                    }
+//                    else (for (int i = 0; i < board.length; i++) {
+//                        for (int j = 0; j < board.length; j++) {
+//                            if (board[0][i] == board[0][j]) {
+//                                result = true;
+//                                break;
+//                            }
+//                           else if (board[i][0] == board[j][0]) {
+//                                result = true;
+//                                break;
+//                            }
+//                        }
+//                    }
+//               }
+//                )
+
+
                 //for () { проверить последовательность.
-                for (int i = 0; i < board.length; i++) {
-                    for (int j = 0; j < board.length; j++) {
-                    if (board[0][i] == board[0][j]) {
-                        result = true;
-                        break;
-                    }
-                    else if (board[i][0] == board[j][0]) {
-                        result = true;
-                        break;
-                    }
-                    }
+//                for (int i = 0; i < board.length; i++) {
+//                    for (int j = 0; j < board.length; j++) {
+//                    if (board[0][i] == board[0][j]) {
+//                        result = true;
+//                        break;
+//                    }
+//                    else if (board[i][0] == board[j][0]) {
+//                        result = true;
+//                        break;
+//                    }
+//                    }
                 }
             }
             System.out.println();
