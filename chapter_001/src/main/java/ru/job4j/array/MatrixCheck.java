@@ -3,24 +3,38 @@ package ru.job4j.array;
 public class MatrixCheck {
     public static boolean isWin(char[][] board) {
         boolean result = false;
+        int d1 = 0;
+        int d2 = 0;
+        int vert = 0;
+        int gor = 0;
         for (int row = 0; row < board.length; row++) {
+            // Проверка диагоналей на равенство Х.
+            if (board[row][row] == 'X') {
+                d1++;
+            }
+            if (board[row][board.length - 1 - row] == 'X') {
+                d2++;
+            }
+            // Проверка диагоналей, вертикальных и горизонтальных линий на равенство Х.
+            if (d1 == board.length || d2 == board.length || vert == board.length || gor == board.length) {
+                result = true;
+                break;
+            } else {
+                // Обнуление горизонтальных и вертикальных линий.
+                vert = 0;
+                gor = 0;
+            }
+            // Проверка горизнтальных и вертикальных линий на равенств Х.
             for (int cell = 0; cell < board.length; cell++) {
-                char sign = board[row][cell];
-                System.out.print(sign);
+                if (board[row][cell] == 'X') {
+                    gor++;
+                }
+                if (board[cell][row] == 'X') {
+                    vert++;
+                }
             }
             System.out.println();
         }
-        int x = 0;
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board.length; j++) {
-                if (board[i][j] == 'X') {
-                    x++;
-                }
-            }
-            if (x == 5)
-                result = true;
-        }
-
         return result;
     }
 
@@ -56,40 +70,3 @@ public class MatrixCheck {
         System.out.println("A board has a winner : " + lose);
     }
 }
-
-//    int x = 0;
-//        for (int i = 0; i < board.length - 1; i++) {
-//        if (board[0][0] == 'X') {              //(board[0][0] == board[i + 1][i + 1]) {         //|| (board[board.length - 1][0] == board[board.length - 1 - i][i])) {
-//        x++;
-//        }
-//        }
-
-
-//                    else (for (int i = 0; i < board.length; i++) {
-//                        for (int j = 0; j < board.length; j++) {
-//                            if (board[0][i] == board[0][j]) {
-//                                result = true;
-//                                break;
-//                            }
-//                           else if (board[i][0] == board[j][0]) {
-//                                result = true;
-//                                break;
-//                            }
-//                        }
-//                    }
-//                }
-//                )
-
-
-//for () { проверить последовательность.
-//                for (int i = 0; i < board.length; i++) {
-//                    for (int j = 0; j < board.length; j++) {
-//                    if (board[0][i] == board[0][j]) {
-//                        result = true;
-//                        break;
-//                    }
-//                    else if (board[i][0] == board[j][0]) {
-//                        result = true;
-//                        break;
-//                    }
-//                    }
