@@ -6,9 +6,10 @@ public class Defragment {
         for (int index = 0; index < array.length; index++) {
             String cell = array[index];
             if (cell == null) {
-                array[i++] = array[index];
-                while (i < array.length)
-                    array[i++] = null;
+                array[i] = array[index];
+                while (index < array.length)
+                   array[i] = array[i + 1];
+                    array[i + 1] = array[i];
                 // переместить первую не null ячейку
                 // Здесь нужен цикл while
             }
