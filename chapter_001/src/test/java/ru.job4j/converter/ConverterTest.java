@@ -22,7 +22,7 @@ public class ConverterTest {
     }
 
     @Test
-    public void EuroToRuble() {
+    public void euroToRuble() {
         int in = 3;
         int expected = 210;
         int out = Converter.EuroToRuble(in);
@@ -30,7 +30,7 @@ public class ConverterTest {
     }
 
     @Test
-    public void DollarToRuble() {
+    public void dollarToRuble() {
         int in = 4;
         int expected = 240;
         int out = Converter.DollarToRuble(in);
