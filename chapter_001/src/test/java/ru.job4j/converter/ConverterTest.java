@@ -25,7 +25,7 @@ public class ConverterTest {
     public void euroToRuble() {
         int in = 3;
         int expected = 210;
-        int out = Converter.EuroToRuble(in);
+        int out = Converter.euroToRuble(in);
         Assert.assertEquals(expected, out);
     }
 
@@ -33,7 +33,7 @@ public class ConverterTest {
     public void dollarToRuble() {
         int in = 4;
         int expected = 240;
-        int out = Converter.DollarToRuble(in);
+        int out = Converter.dollarToRuble(in);
         Assert.assertEquals(expected, out);
     }
 }
