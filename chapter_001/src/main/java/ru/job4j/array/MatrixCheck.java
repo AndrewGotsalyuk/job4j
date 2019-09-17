@@ -8,23 +8,19 @@ public class MatrixCheck {
         int vert = 0;
         int gor = 0;
         for (int row = 0; row < board.length; row++) {
-            // Проверка диагоналей на равенство Х.
             if (board[row][row] == 'X') {
                 d1++;
             }
             if (board[row][board.length - 1 - row] == 'X') {
                 d2++;
             }
-            // Проверка диагоналей, вертикальных и горизонтальных линий на равенство Х.
             if (d1 == board.length || d2 == board.length || vert == board.length || gor == board.length) {
                 result = true;
                 break;
             } else {
-                // Обнуление горизонтальных и вертикальных линий.
                 vert = 0;
                 gor = 0;
             }
-            // Проверка горизнтальных и вертикальных линий на равенств Х.
             for (int cell = 0; cell < board.length; cell++) {
                 if (board[row][cell] == 'X') {
                     gor++;

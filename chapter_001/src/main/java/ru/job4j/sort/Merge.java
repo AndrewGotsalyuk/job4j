@@ -9,7 +9,7 @@ public class Merge {
         int arrL = 0;
         int arrR = 0;
         while (arrL < left.length && arrR < right.length) {
-            if(left[arrL] <= right[arrR]) {
+            if (left[arrL] <= right[arrR]) {
                 rsl[arrL + arrR] = left[arrL];
                 arrL++;
             } else {
@@ -17,14 +17,13 @@ public class Merge {
                 arrR++;
             }
         }
-
         if (arrL >= left.length) {
-            while(arrR < right.length) {
+            while (arrR < right.length) {
                 rsl[arrL + arrR] = right[arrR];
                 arrR++;
             }
         } else if (arrR >= right.length) {
-            while(arrL < left.length) {
+            while (arrL < left.length) {
                 rsl[arrL + arrR] = left[arrL];
                 arrL++;
             }
@@ -35,8 +34,8 @@ public class Merge {
     public static void main(String[] args) {
         Merge process = new Merge();
         int[] rsl = process.merge(
-                new int[] {1, 3, 5},
-                new int[] {2, 4}
+                new int[]{1, 3, 5},
+                new int[]{2, 4}
         );
         System.out.println(Arrays.toString(rsl));
     }
